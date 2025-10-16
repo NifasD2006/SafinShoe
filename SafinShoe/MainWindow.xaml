@@ -1,0 +1,20 @@
+﻿<Window x:Class="SafinShoe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SafinShoe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Icon="res\Icon.ico" FontFamily="Times new roman">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" ></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="20" ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Content="Назад" HorizontalAlignment="Right" Click="Button_Click" Name="BackBtn"></Button>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="ООО «Обувь» " ></TextBlock>
+        <Image Source="res/Icon.png" HorizontalAlignment="Left" ></Image>
+        <Frame Grid.Row="1" Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden" ></Frame>
+    </Grid>
+</Window>
