@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SafinShoe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Icon="res\Icon.ico" FontFamily="Times new roman">
+        Title="MainWindow" Height="900" Width="1600" Icon="res\Icon.ico" FontFamily="Times new roman"   ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80" ></RowDefinition>

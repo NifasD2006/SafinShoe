@@ -11,7 +11,10 @@ namespace SafinShoe
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Windows;
+    using System.Windows.Media;
+
+
     public partial class Products
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -32,9 +35,61 @@ namespace SafinShoe
         public string ProductDescription { get; set; }
         public string ProductImage { get; set; }
 
+        public SolidColorBrush DiscountColor
+        {
+            get
+            {
+                if (ProductCount == 0)
+                    return (SolidColorBrush)new BrushConverter().ConvertFromString("lightblue");
+                if (ProductCount > 15)
+                {
+                    return (SolidColorBrush)new BrushConverter().ConvertFromString("#2E8B57");
+                }
+                return null;
+            }
+        }
+
+        public TextDecorationCollection TextDecoration
+        {
+            get
+            {
+                if (ProductDiscount > 0)
+                {
+                    return TextDecorations.Strikethrough;
+                }
+                return null;
+            }
+        }
+        public SolidColorBrush CostColor
+        {
+            get
+            {
+
+                if (ProductDiscount > 0)
+                    return (SolidColorBrush)new BrushConverter().ConvertFromString("red");
+                return null;
+            }
+        }
+
+        public string OldCost
+        {
+            get
+            {
+                if (ProductDiscount > 0)
+                    return ProductPrice.ToString();
+                return "";
+            }
+        }
+
+        public string NewCost
+        {
+            get
+            {
+                return (ProductPrice * (100 - ProductDiscount) / 100).ToString();
+            }
+        }
 
 
-    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProducts> OrderProducts { get; set; }
         public virtual ProductTypes ProductTypes { get; set; }
