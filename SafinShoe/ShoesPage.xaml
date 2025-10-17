@@ -108,7 +108,7 @@
                                     <StackPanel Grid.Column="2" Orientation="Horizontal" >
                                         <TextBlock Text="{Binding OldCost, StringFormat = Цена: {0}}" Grid.Column="2" Foreground="{Binding CostColor}" TextDecorations="Strikethrough"></TextBlock>
                                         <TextBlock Text="{Binding NewCost}" FontSize="20"  ></TextBlock>
-                                        <TextBlock Text="{Binding ProductDiscount, StringFormat = | Скидка: {0} %}" Grid.Column="2"></TextBlock>
+                                        <TextBlock Text="{Binding ProductDiscount, StringFormat = |  Скидка: {0} %}" Grid.Column="2"></TextBlock>
                                     </StackPanel>
                                     <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Horizontal" >
                                         <TextBlock Text="{Binding ProductCount, StringFormat = Кол-во на складе: {0} }" ></TextBlock>
