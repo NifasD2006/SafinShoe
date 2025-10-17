@@ -94,32 +94,18 @@
                                 <TextBlock Text="{Binding ProductSupplier, StringFormat= |Поставщик: {0}}"   FontSize="20" ></TextBlock>
                             </StackPanel>
 
-                            <Border Grid.Column="2" BorderBrush="Black" BorderThickness="1" >
-                                <Grid ShowGridLines="True">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition></ColumnDefinition>
-
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <StackPanel Grid.Column="2" Orientation="Horizontal" >
-                                        <TextBlock Text="{Binding OldCost, StringFormat = Цена: {0}}" Grid.Column="2" Foreground="{Binding CostColor}" TextDecorations="Strikethrough"></TextBlock>
-                                        <TextBlock Text="{Binding NewCost}" FontSize="20"  ></TextBlock>
-                                        <TextBlock Text="{Binding ProductDiscount, StringFormat = |  Скидка: {0} %}" Grid.Column="2"></TextBlock>
-                                    </StackPanel>
-                                    <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Horizontal" >
-                                        <TextBlock Text="{Binding ProductCount, StringFormat = Кол-во на складе: {0} }" ></TextBlock>
-                                        <TextBlock Text="{Binding ProductUnit}"></TextBlock>
-                                    </StackPanel>
-                                </Grid>
-
-                            </Border>
+                            <StackPanel Grid.Column="2" Orientation="Horizontal" >
+                                <TextBlock Text="{Binding OldCost, StringFormat = Цена: {0}}" Grid.Column="2" Foreground="{Binding CostColor}" TextDecorations="Strikethrough"></TextBlock>
+                                <TextBlock Text="{Binding NewCost}" FontSize="20"  ></TextBlock>
+                                <TextBlock Text="{Binding ProductDiscount, StringFormat = |  Скидка: {0} %}" Grid.Column="2"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Horizontal" >
+                                <TextBlock Text="{Binding ProductCount, StringFormat = Кол-во на складе: {0} }" ></TextBlock>
+                                <TextBlock Text="{Binding ProductUnit}"></TextBlock>
+                            </StackPanel>
 
 
-                            
+
 
 
 
